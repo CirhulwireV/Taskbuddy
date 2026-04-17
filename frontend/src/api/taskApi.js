@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE = 'http://localhost:8080/api/tasks'
+const BASE = `${import.meta.env.VITE_API_BASE || 'http://localhost:8080'}/api/tasks`
 
 const getHeaders = () => ({
   headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
